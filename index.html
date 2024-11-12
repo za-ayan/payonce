@@ -1,6 +1,1675 @@
-<html>
-<head>
-</head>
-<body>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="/Black_Circle_Icon_Business_Logo.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Ad Impact on Viewing Experience</title>
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+
+    <!--stylesheet-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <style>
+    .logo {
+      text-decoration: none;
+    }
+
+    .logo-text {
+      font-family: "Poppins", sans-serif;
+      font-size: 2rem;
+      font-weight: 600;
+      color: #ff4757; /* Vibrant red */
+      background: linear-gradient(
+        45deg,
+        #ff6b81,
+        #3742fa
+      ); /* Gradient background */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; /* Fill text with gradient */
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .logo-text:hover {
+      transform: scale(1.1); /* Slight zoom on hover */
+      color: #2ed573; /* Change color on hover */
+    }
+    .preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .preloader-text {
+      font-family: "Poppins", sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        opacity: 0.5;
+        transform: scale(0.95);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+      100% {
+        opacity: 0.5;
+        transform: scale(0.95);
+      }
+    }
+    #adImpactSvg {
+      perspective: 1000px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    #tv {
+      transform-origin: center;
+      transition: all 0.5s ease;
+    }
+
+    #xMark {
+      transition: opacity 0.5s ease;
+    }
+
+    #adBubble1,
+    #adBubble2 {
+      animation: pulse 2s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.7;
+      }
+      50% {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+    }
+    #psychologicalImpactSvg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    #brain {
+      transition: all 0.5s ease;
+    }
+
+    #cognitiveLoad circle {
+      animation: pulse 2s infinite ease-in-out;
+    }
+
+    #adPopups rect {
+      animation: float 3s infinite ease-in-out;
+    }
+
+    #emotions {
+      transition: opacity 0.5s ease;
+    }
+
+    @keyframes pulse {
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.7;
+      }
+      50% {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes float {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+    #psychologicalImpactSvg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    #brain {
+      transition: all 0.5s ease;
+    }
+
+    #cognitiveLoad circle {
+      animation: pulse 2s infinite ease-in-out;
+    }
+
+    #adPopups rect {
+      animation: float 3s infinite ease-in-out;
+    }
+
+    #emotions {
+      transition: opacity 0.5s ease;
+    }
+
+    @keyframes pulse {
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.7;
+      }
+      50% {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes float {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+    #faqIllustration {
+      max-width: 100%;
+      height: auto;
+    }
+
+    #balanceScale {
+      transform-origin: center bottom;
+      transition: transform 0.5s ease;
+    }
+
+    #leftScale,
+    #rightScale {
+      transition: transform 0.5s ease;
+    }
+
+    #faqSymbols circle {
+      transition: transform 0.3s ease;
+    }
+
+    #faqSymbols circle:hover {
+      transform: scale(1.1);
+    }
+    .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+
+
+        .popup-overlay.active {
+            display: flex;
+        }
+  </style>
+  <style type="text/css">
+    .mauticform_wrapper { max-width: 600px; margin: 10px auto; }
+    .mauticform-innerform {}
+    .mauticform-post-success {}
+    .mauticform-name { font-weight: bold; font-size: 1.5em; margin-bottom: 3px; }
+    .mauticform-description { margin-top: 2px; margin-bottom: 10px; }
+    .mauticform-error { margin-bottom: 10px; color: red; }
+    .mauticform-message { margin-bottom: 10px;color: green; }
+    .mauticform-row { display: block; margin-bottom: 20px; }
+    .mauticform-label { font-size: 1.1em; display: block; font-weight: bold; margin-bottom: 5px; }
+    .mauticform-row.mauticform-required .mauticform-label:after { color: #e32; content: " *"; display: inline; }
+    .mauticform-helpmessage { display: block; font-size: 0.9em; margin-bottom: 3px; }
+    .mauticform-errormsg { display: block; color: red; margin-top: 2px; }
+    .mauticform-selectbox, .mauticform-input, .mauticform-textarea { width: 100%; padding: 0.5em 0.5em; border: 1px solid #CCC; background: #fff; box-shadow: 0px 0px 0px #fff inset; border-radius: 4px; box-sizing: border-box; }
+    .mauticform-checkboxgrp-row {}
+    .mauticform-checkboxgrp-label { font-weight: normal; }
+    .mauticform-checkboxgrp-checkbox {}
+    .mauticform-radiogrp-row {}
+    .mauticform-radiogrp-label { font-weight: normal; }
+    .mauticform-radiogrp-radio {}
+    .mauticform-button-wrapper .mauticform-button.btn-default, .mauticform-pagebreak-wrapper .mauticform-pagebreak.btn-default { color: #5d6c7c;background-color: #ffffff;border-color: #dddddd;}
+    .mauticform-button-wrapper .mauticform-button, .mauticform-pagebreak-wrapper .mauticform-pagebreak { display: inline-block;margin-bottom: 0;font-weight: 600;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 6px 12px;font-size: 13px;line-height: 1.3856;border-radius: 3px;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+    .mauticform-button-wrapper .mauticform-button.btn-default[disabled], .mauticform-pagebreak-wrapper .mauticform-pagebreak.btn-default[disabled] { background-color: #ffffff; border-color: #dddddd; opacity: 0.75; cursor: not-allowed; }
+    .mauticform-pagebreak-wrapper .mauticform-button-wrapper {  display: inline; }
+    .mauticform-field-hidden { display:none }
+  </style>
+
+  <body>
+    <!--preloader start-->
+    <div class="preloader">
+      <div class="preloader-text">Laughter</div>
+    </div>
+    <!--preloader end-->
+
+    <!--header section start-->
+    <header class="header header-2">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="header__logo">
+            <a href="index.html" class="logo">
+              <span class="logo-text">Laughter</span>
+            </a>
+          </div>
+          <div class="header__nav">
+            <ul class="header__nav-primary">
+              <li>
+                <a href="index.html"><i class="fad fa-home-alt"></i></a>
+              </li>
+              <li class="nav__dropdown dropdown-wrapper" id="menu-1">
+                <a href="#"> Home </a>
+              </li>
+              <li><a href="#interruptions">Interruptions</a></li>
+              <li><a href="#frequency">Frequency & Length</a></li>
+              <li><a href="#user-control">User Control</a></li>
+              <li><a href="#psychological-impact">Psychological Impact</a></li>
+              <li><a href="#faq">FAQs</a></li>
+            </ul>
+            <span><i class="fas fa-times"></i></span>
+          </div>
+          <div class="header__bars">
+            <div class="header__bars-bar header__bars-bar-1"></div>
+            <div class="header__bars-bar header__bars-bar-2"></div>
+            <div class="header__bars-bar header__bars-bar-3"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--header section end-->
+
+    <!--hero section start-->
+    <section class="hero hero-2">
+      <div class="hero__wrapper">
+        <div class="container">
+          <div class="row align-items-lg-center">
+            <div class="col-lg-6 order-2 order-lg-1">
+              <h1 class="main-heading color-black">
+                The Impact of Ads on Viewing Experience
+              </h1>
+              <p class="paragraph">
+                Ads can significantly impact the viewing experience in several
+                ways, often leading to a less enjoyable and more frustrating
+                experience for users.
+              </p>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2">
+              <!-- <div class="questions-img hero-img">
+                <img
+                  src="assets/images/pla"
+                  alt="Ad Impact Illustration"
+                />
+              </div> -->
+              <div class="questions-img hero-img">
+                <svg
+                  id="adImpactSvg"
+                  width="250"
+                  height="250"
+                  viewBox="0 0 250 250"
+                >
+                  <defs>
+                    <filter
+                      id="shadow"
+                      x="-20%"
+                      y="-20%"
+                      width="140%"
+                      height="140%"
+                    >
+                      <feDropShadow
+                        dx="0"
+                        dy="4"
+                        stdDeviation="5"
+                        flood-color="#000"
+                        flood-opacity="0.3"
+                      />
+                    </filter>
+                    <linearGradient
+                      id="tvGradient"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
+                      <stop
+                        offset="0%"
+                        style="stop-color: #4a4a4a; stop-opacity: 1"
+                      />
+                      <stop
+                        offset="100%"
+                        style="stop-color: #2a2a2a; stop-opacity: 1"
+                      />
+                    </linearGradient>
+                  </defs>
+                  <circle cx="125" cy="125" r="120" fill="#f0f0f0" />
+                  <rect
+                    id="tv"
+                    x="45"
+                    y="45"
+                    width="160"
+                    height="120"
+                    rx="10"
+                    fill="url(#tvGradient)"
+                    filter="url(#shadow)"
+                  />
+                  <rect x="55" y="55" width="140" height="100" fill="#1a1a1a" />
+                  <circle
+                    id="adBubble1"
+                    cx="60"
+                    cy="190"
+                    r="25"
+                    fill="#ff4136"
+                    filter="url(#shadow)"
+                  />
+                  <text
+                    x="60"
+                    y="195"
+                    text-anchor="middle"
+                    fill="white"
+                    font-size="12"
+                    font-weight="bold"
+                  >
+                    Ad
+                  </text>
+                  <circle
+                    id="adBubble2"
+                    cx="190"
+                    cy="60"
+                    r="25"
+                    fill="#ff4136"
+                    filter="url(#shadow)"
+                  />
+                  <text
+                    x="190"
+                    y="65"
+                    text-anchor="middle"
+                    fill="white"
+                    font-size="12"
+                    font-weight="bold"
+                  >
+                    Ad
+                  </text>
+                  <g id="xMark" opacity="0">
+                    <path
+                      d="M105 85 L145 125 M145 85 L105 125"
+                      stroke="white"
+                      stroke-width="8"
+                      stroke-linecap="round"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--hero section end-->
+
+    <!--feature section start-->
+    <section class="feature" id="interruptions">
+      <div class="container">
+        <h2 class="section-heading color-black">Interruptions</h2>
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="feature__box feature__box--1">
+              <div class="icon icon-1">
+                <i class="fad fa-pause-circle"></i>
+              </div>
+              <div class="feature__box__wrapper">
+                <div class="feature__box--content feature__box--content-1">
+                  <h3>Disruption of Flow</h3>
+                  <p class="paragraph dark">
+                    Ads can interrupt the narrative flow of a movie or TV show,
+                    breaking immersion and reducing enjoyment.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="feature__box feature__box--2">
+              <div class="icon icon-2">
+                <i class="fad fa-clock"></i>
+              </div>
+              <div class="feature__box__wrapper">
+                <div class="feature__box--content feature__box--content-2">
+                  <h3>Poor Timing</h3>
+                  <p class="paragraph dark">
+                    Ads that appear at inopportune moments, such as during a
+                    climactic scene, can be particularly disruptive.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="feature__box feature__box--3">
+              <div class="icon icon-3">
+                <i class="fad fa-repeat"></i>
+              </div>
+              <div class="feature__box__wrapper">
+                <div class="feature__box--content feature__box--content-3">
+                  <h3>Excessive Ads</h3>
+                  <p class="paragraph dark">
+                    A high frequency of ads or long ad breaks can lead to viewer
+                    frustration and impatience.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="feature__box feature__box--4">
+              <div class="icon icon-4">
+                <i class="fad fa-ban"></i>
+              </div>
+              <div class="feature__box__wrapper">
+                <div class="feature__box--content feature__box--content-4">
+                  <h3>Lack of Control</h3>
+                  <p class="paragraph dark">
+                    Not being able to skip or control ads can increase
+                    frustration.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--feature section end-->
+
+    <!--growth section start-->
+    <section class="growth" id="frequency">
+      <div class="growth__wrapper">
+        <div class="container">
+          <h2 class="section-heading color-black">Frequency and Length</h2>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="growth__box">
+                <div class="icon">
+                  <i class="fad fa-repeat"></i>
+                </div>
+                <div class="content">
+                  <h3>Excessive Ads</h3>
+                  <p class="paragraph dark">
+                    A high frequency of ads or long ad breaks can lead to viewer
+                    frustration and impatience.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="growth__box">
+                <div class="icon">
+                  <i class="fad fa-clone"></i>
+                </div>
+                <div class="content">
+                  <h3>Repetitive Ads</h3>
+                  <p class="paragraph dark">
+                    Seeing the same ad repeatedly can lead to annoyance and ad
+                    fatigue.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--growth section end-->
+
+    <!--video section start-->
+    <!--user control section start-->
+    <section class="growth" id="user-control">
+      <div class="growth__wrapper">
+        <div class="container">
+          <!-- <h2 class="section-heading color-black">User Control</h2> -->
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="growth__box">
+                <div class="icon">
+                  <i class="fad fa-ban"></i>
+                </div>
+                <div class="content">
+                  <h3>Lack of Control</h3>
+                  <p class="paragraph dark">
+                    Not being able to skip or control ads can increase
+                    frustration.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="growth__box">
+                <div class="icon">
+                  <i class="fad fa-bullseye-arrow"></i>
+                </div>
+                <div class="content">
+                  <h3>Ad Personalization</h3>
+                  <p class="paragraph dark">
+                    Irrelevant ads can feel intrusive and reduce the overall
+                    quality of the viewing experience.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--user control section end-->
+    <!--video section end-->
+
+    <!--questions section start-->
+    <section class="questions" id="psychological-impact">
+      <div class="questions__wrapper">
+        <div class="container">
+          <h2 class="section-heading color-black">Psychological Impact</h2>
+          <div class="row align-items-lg-center">
+            <div class="col-lg-6 order-2 order-lg-1">
+              <div id="accordion">
+                <div class="card" id="card-1">
+                  <div class="card-header" id="heading-1">
+                    <h5 class="mb-0">
+                      <button
+                        class="btn btn-link"
+                        data-toggle="collapse"
+                        data-target="#collapse-1"
+                        aria-expanded="true"
+                        aria-controls="collapse-1"
+                      >
+                        Increased Cognitive Load
+                      </button>
+                    </h5>
+                  </div>
+
+                  <div
+                    id="collapse-1"
+                    class="collapse show"
+                    aria-labelledby="heading-1"
+                    data-parent="#accordion"
+                  >
+                    <div class="card-body">
+                      <p class="paragraph">
+                        Frequent ads can increase cognitive load, making it
+                        harder for viewers to focus on the content.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card" id="card-2">
+                  <div class="card-header" id="heading-2">
+                    <h5 class="mb-0 hidden">
+                      <button
+                        class="btn btn-link collapsed"
+                        data-toggle="collapse"
+                        data-target="#collapse-2"
+                        aria-expanded="false"
+                        aria-controls="collapse-2"
+                      >
+                        Negative Emotions
+                      </button>
+                    </h5>
+                  </div>
+                  <div
+                    id="collapse-2"
+                    class="collapse"
+                    aria-labelledby="heading-2"
+                    data-parent="#accordion"
+                  >
+                    <div class="card-body">
+                      <p class="paragraph">
+                        Poorly targeted or irrelevant ads can evoke negative
+                        emotions, such as irritation or anger.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="col-lg-6 order-1 order-lg-2">
+              <div class="questions-img">
+                <img
+                  src="assets/images/phone-01.png"
+                  alt="Psychological Impact Illustration"
+                />
+              </div>
+            </div> -->
+
+            <div class="col-lg-6 order-1 order-lg-2">
+              <div class="questions-img">
+                <svg
+                  id="psychologicalImpactSvg"
+                  width="400"
+                  height="400"
+                  viewBox="0 0 400 400"
+                >
+                  <defs>
+                    <filter
+                      id="brainBlur"
+                      x="-50%"
+                      y="-50%"
+                      width="200%"
+                      height="200%"
+                    >
+                      <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
+                    </filter>
+                    <linearGradient
+                      id="adGradient"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
+                      <stop
+                        offset="0%"
+                        style="stop-color: #ff4136; stop-opacity: 1"
+                      />
+                      <stop
+                        offset="100%"
+                        style="stop-color: #ff851b; stop-opacity: 1"
+                      />
+                    </linearGradient>
+                  </defs>
+
+                  <!-- Brain shape -->
+                  <path
+                    id="brain"
+                    d="M200,100 C260,60 300,100 300,150 C300,200 280,220 260,240 C240,260 220,280 200,300 C180,280 160,260 140,240 C120,220 100,200 100,150 C100,100 140,60 200,100"
+                    fill="#f1f1f1"
+                    stroke="#333"
+                    stroke-width="4"
+                  />
+
+                  <!-- Cognitive load representation -->
+                  <g id="cognitiveLoad">
+                    <circle
+                      cx="200"
+                      cy="200"
+                      r="60"
+                      fill="none"
+                      stroke="#666"
+                      stroke-width="8"
+                      stroke-dasharray="10 5"
+                    />
+                    <text
+                      x="200"
+                      y="205"
+                      text-anchor="middle"
+                      fill="#666"
+                      font-size="14"
+                      font-weight="bold"
+                    >
+                      Cognitive Load
+                    </text>
+                  </g>
+
+                  <!-- Ad popups -->
+                  <g id="adPopups">
+                    <rect
+                      x="50"
+                      y="50"
+                      width="60"
+                      height="40"
+                      rx="5"
+                      fill="url(#adGradient)"
+                    />
+                    <text
+                      x="80"
+                      y="75"
+                      text-anchor="middle"
+                      fill="white"
+                      font-size="12"
+                      font-weight="bold"
+                    >
+                      Ad
+                    </text>
+
+                    <rect
+                      x="300"
+                      y="80"
+                      width="60"
+                      height="40"
+                      rx="5"
+                      fill="url(#adGradient)"
+                    />
+                    <text
+                      x="330"
+                      y="105"
+                      text-anchor="middle"
+                      fill="white"
+                      font-size="12"
+                      font-weight="bold"
+                    >
+                      Ad
+                    </text>
+
+                    <rect
+                      x="70"
+                      y="300"
+                      width="60"
+                      height="40"
+                      rx="5"
+                      fill="url(#adGradient)"
+                    />
+                    <text
+                      x="100"
+                      y="325"
+                      text-anchor="middle"
+                      fill="white"
+                      font-size="12"
+                      font-weight="bold"
+                    >
+                      Ad
+                    </text>
+
+                    <rect
+                      x="280"
+                      y="280"
+                      width="60"
+                      height="40"
+                      rx="5"
+                      fill="url(#adGradient)"
+                    />
+                    <text
+                      x="310"
+                      y="305"
+                      text-anchor="middle"
+                      fill="white"
+                      font-size="12"
+                      font-weight="bold"
+                    >
+                      Ad
+                    </text>
+                  </g>
+
+                  <!-- Emotion icons -->
+                  <g id="emotions" opacity="0">
+                    <path
+                      d="M150,350 C130,370 110,360 100,350 C90,340 100,330 110,340 C120,350 130,340 150,350"
+                      fill="none"
+                      stroke="#333"
+                      stroke-width="3"
+                    />
+                    <path
+                      d="M250,350 C270,370 290,360 300,350 C310,340 300,330 290,340 C280,350 270,340 250,350"
+                      fill="none"
+                      stroke="#333"
+                      stroke-width="3"
+                    />
+                    <circle cx="200" cy="370" r="10" fill="#333" />
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--questions section end-->
+
+    <!--faq section start-->
+    <section class="questions" id="faq">
+      <div class="questions__wrapper">
+        <div class="container">
+          <h2 class="section-heading color-black">
+            Frequently Asked Questions
+          </h2>
+          <div class="row align-items-lg-center">
+            <div class="col-lg-6 order-2 order-lg-1">
+              <div id="accordion-faq">
+                <div class="card" id="faq-1">
+                  <div class="card-header" id="faq-heading-1">
+                    <h5 class="mb-0">
+                      <button
+                        class="btn btn-link"
+                        data-toggle="collapse"
+                        data-target="#faq-collapse-1"
+                        aria-expanded="true"
+                        aria-controls="faq-collapse-1"
+                      >
+                        How do ads affect viewer engagement?
+                      </button>
+                    </h5>
+                  </div>
+
+                  <div
+                    id="faq-collapse-1"
+                    class="collapse show"
+                    aria-labelledby="faq-heading-1"
+                    data-parent="#accordion-faq"
+                  >
+                    <div class="card-body">
+                      <p class="paragraph">
+                        Ads can significantly reduce viewer engagement by
+                        interrupting the flow of content, causing frustration,
+                        and potentially leading to viewers abandoning the
+                        content altogether.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card" id="faq-2">
+                  <div class="card-header" id="faq-heading-2">
+                    <h5 class="mb-0 hidden">
+                      <button
+                        class="btn btn-link collapsed"
+                        data-toggle="collapse"
+                        data-target="#faq-collapse-2"
+                        aria-expanded="false"
+                        aria-controls="faq-collapse-2"
+                      >
+                        Are there any positive aspects of ads in content?
+                      </button>
+                    </h5>
+                  </div>
+                  <div
+                    id="faq-collapse-2"
+                    class="collapse"
+                    aria-labelledby="faq-heading-2"
+                    data-parent="#accordion-faq"
+                  >
+                    <div class="card-body">
+                      <p class="paragraph">
+                        While ads can be disruptive, they also play a crucial
+                        role in funding free content and supporting content
+                        creators. Well-targeted, relevant ads can sometimes
+                        provide value to viewers by introducing them to products
+                        or services they might be interested in.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card" id="faq-3">
+                  <div class="card-header" id="faq-heading-3">
+                    <h5 class="mb-0 hidden">
+                      <button
+                        class="btn btn-link collapsed"
+                        data-toggle="collapse"
+                        data-target="#faq-collapse-3"
+                        aria-expanded="false"
+                        aria-controls="faq-collapse-3"
+                      >
+                        How can content providers balance ads and user
+                        experience?
+                      </button>
+                    </h5>
+                  </div>
+                  <div
+                    id="faq-collapse-3"
+                    class="collapse"
+                    aria-labelledby="faq-heading-3"
+                    data-parent="#accordion-faq"
+                  >
+                    <div class="card-body">
+                      <p class="paragraph">
+                        Content providers can improve user experience by
+                        limiting ad frequency, ensuring better ad targeting,
+                        providing ad-free options, and strategically placing ads
+                        at natural breaks in content rather than during crucial
+                        moments.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="col-lg-6 order-1 order-lg-2">
+              <div class="questions-img">
+                <img src="assets/images/phone-02.png" alt="FAQ Illustration" />
+              </div>
+            </div> -->
+            <div class="col-lg-6 order-1 order-lg-2">
+              <div class="questions-img">
+                <svg
+                  id="faqIllustration"
+                  width="400"
+                  height="400"
+                  viewBox="0 0 400 400"
+                >
+                  <defs>
+                    <filter
+                      id="dropShadow"
+                      x="-20%"
+                      y="-20%"
+                      width="140%"
+                      height="140%"
+                    >
+                      <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+                      <feOffset dx="2" dy="2" result="offsetblur" />
+                      <feFlood flood-color="rgba(0,0,0,0.3)" />
+                      <feComposite in2="offsetblur" operator="in" />
+                      <feMerge>
+                        <feMergeNode />
+                        <feMergeNode in="SourceGraphic" />
+                      </feMerge>
+                    </filter>
+                  </defs>
+
+                  <!-- Balance scale -->
+                  <g id="balanceScale">
+                    <line
+                      x1="200"
+                      y1="100"
+                      x2="200"
+                      y2="300"
+                      stroke="#333"
+                      stroke-width="4"
+                    />
+                    <line
+                      x1="100"
+                      y1="300"
+                      x2="300"
+                      y2="300"
+                      stroke="#333"
+                      stroke-width="4"
+                    />
+                    <circle cx="200" cy="300" r="10" fill="#333" />
+
+                    <!-- Left scale (Ads) -->
+                    <g id="leftScale">
+                      <line
+                        x1="150"
+                        y1="300"
+                        x2="100"
+                        y2="200"
+                        stroke="#333"
+                        stroke-width="2"
+                      />
+                      <line
+                        x1="250"
+                        y1="300"
+                        x2="300"
+                        y2="200"
+                        stroke="#333"
+                        stroke-width="2"
+                      />
+                      <rect
+                        x="50"
+                        y="180"
+                        width="100"
+                        height="20"
+                        rx="10"
+                        fill="#ff4136"
+                      />
+                      <text
+                        x="100"
+                        y="195"
+                        text-anchor="middle"
+                        fill="white"
+                        font-size="14"
+                      >
+                        Ads
+                      </text>
+                    </g>
+
+                    <!-- Right scale (User Experience) -->
+                    <g id="rightScale">
+                      <line
+                        x1="150"
+                        y1="300"
+                        x2="100"
+                        y2="250"
+                        stroke="#333"
+                        stroke-width="2"
+                      />
+                      <line
+                        x1="250"
+                        y1="300"
+                        x2="300"
+                        y2="250"
+                        stroke="#333"
+                        stroke-width="2"
+                      />
+                      <rect
+                        x="250"
+                        y="230"
+                        width="100"
+                        height="20"
+                        rx="10"
+                        fill="#0074D9"
+                      />
+                      <text
+                        x="300"
+                        y="245"
+                        text-anchor="middle"
+                        fill="white"
+                        font-size="14"
+                      >
+                        UX
+                      </text>
+                    </g>
+                  </g>
+
+                  <!-- FAQ symbols -->
+                  <g id="faqSymbols">
+                    <circle
+                      cx="100"
+                      cy="100"
+                      r="30"
+                      fill="#f1f1f1"
+                      stroke="#333"
+                      stroke-width="2"
+                      filter="url(#dropShadow)"
+                    />
+                    <text
+                      x="100"
+                      y="108"
+                      text-anchor="middle"
+                      fill="#333"
+                      font-size="24"
+                      font-weight="bold"
+                    >
+                      ?
+                    </text>
+
+                    <circle
+                      cx="300"
+                      cy="100"
+                      r="30"
+                      fill="#f1f1f1"
+                      stroke="#333"
+                      stroke-width="2"
+                      filter="url(#dropShadow)"
+                    />
+                    <text
+                      x="300"
+                      y="108"
+                      text-anchor="middle"
+                      fill="#333"
+                      font-size="24"
+                      font-weight="bold"
+                    >
+                      ?
+                    </text>
+
+                    <circle
+                      cx="200"
+                      cy="50"
+                      r="30"
+                      fill="#f1f1f1"
+                      stroke="#333"
+                      stroke-width="2"
+                      filter="url(#dropShadow)"
+                    />
+                    <text
+                      x="200"
+                      y="58"
+                      text-anchor="middle"
+                      fill="#333"
+                      font-size="24"
+                      font-weight="bold"
+                    >
+                      ?
+                    </text>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--faq section end-->
+
+    <!-- Newsletter start here -->
+    <section class="newsletter">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h2 class="section-heading color-black">Subscribe to Our Newsletter</h2>
+            <p class="paragraph dark">
+              Stay updated with the latest insights on ad impact and viewing experience. Join our newsletter for exclusive content and tips.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <!-- Replace the existing form with Mautic form -->
+            <div id="mauticform_wrapper_laughternewsletter" class="mauticform_wrapper">
+              <form autocomplete="false" role="form" method="post" action="https://subscribe.zeeshanali.org/form/submit?formId=11" id="mauticform_laughternewsletter" data-mautic-form="laughternewsletter" enctype="multipart/form-data" laughter>
+                <div class="mauticform-error" id="mauticform_laughternewsletter_error"></div>
+                <div class="mauticform-message" id="mauticform_laughternewsletter_message"></div>
+                <div class="mauticform-innerform">
+                  <div class="mauticform-page-wrapper mauticform-page-1" data-mautic-form-page="1">
+                    <div id="mauticform_laughternewsletter_f_name" class="mauticform-row mauticform-text mauticform-field-1">
+                      <label id="mauticform_label_laughternewsletter_f_name" for="mauticform_input_laughternewsletter_f_name" class="mauticform-label">Name</label>
+                      <input id="mauticform_input_laughternewsletter_f_name" name="mauticform[f_name]" value="" placeholder="Enter your name" class="mauticform-input" type="text">
+                      <span class="mauticform-errormsg" style="display: none;"></span>
+                    </div>
+    
+                    <div id="mauticform_laughternewsletter_email" class="mauticform-row mauticform-email mauticform-field-2">
+                      <label id="mauticform_label_laughternewsletter_email" for="mauticform_input_laughternewsletter_email" class="mauticform-label">Email</label>
+                      <input id="mauticform_input_laughternewsletter_email" name="mauticform[email]" value="" placeholder="Enter your email" class="mauticform-input" type="email">
+                      <span class="mauticform-errormsg" style="display: none;"></span>
+                    </div>
+    
+                    <div id="mauticform_laughternewsletter_submit" class="mauticform-row mauticform-button-wrapper mauticform-field-3">
+                      <button type="submit" name="mauticform[submit]" id="mauticform_input_laughternewsletter_submit" value="" class="mauticform-button btn btn-default">Subscribe</button>
+                    </div>
+                  </div>
+                </div>
+    
+                <input type="hidden" name="mauticform[formId]" id="mauticform_laughternewsletter_id" value="11">
+                <input type="hidden" name="mauticform[return]" id="mauticform_laughternewsletter_return" value="">
+                <input type="hidden" name="mauticform[formName]" id="mauticform_laughternewsletter_name" value="laughternewsletter">
+              </form>
+            </div>
+            <p class="form-text text-muted mt-2">
+              By subscribing, you agree to our <a href="#" class="text-primary">Privacy Policy</a> and
+              <a href="#" class="text-primary">Terms of Service</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter end here -->
+
+    <!--footer start-->
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="footer__info">
+                <div class="footer__info--logo">
+                  <a href="index.html">
+                    <span class="logo-text">Laughter</span>
+                  </a>
+                </div>
+                <div class="footer__info--content">
+                  <p class="paragraph dark">
+                    Health tracker is an app that helps you organize yourself on
+                    the daily basis using systematic algorithms to achieve
+                    success.
+                  </p>
+                  <div class="social">
+                    <ul>
+                      <li class="facebook">
+                        <a href="https://www.instagram.com/zacharityfeedfoundation/"><i class="fab fa-instagram"></i></a>
+                      </li>
+                      <li class="twitter">
+                        <a href="https://x.com/za_charity"><i class="fab fa-twitter"></i></a>
+                      </li>
+                      <li class="linkedin">
+                        <a href="https://www.linkedin.com/company/za-charity-feed-foundation"><i class="fab fa-linkedin-in"></i></a>
+                      </li>
+                      <li class="youtube">
+                        <a href="https://www.youtube.com/@Zazeeshanali"><i class="fab fa-youtube"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="footer__content-wrapper">
+                <div class="footer__list">
+                  <ul>
+                    <li>Explore</li>
+                    <li><a href="#interruptions">Interruptions</a></li>
+                    <li><a href="#frequency">Frequency & amp; Length</a></li>
+                    <li><a href="#user-control">User Control</a></li>
+                    <li>
+                      <a href="#psychological-impact">Psychological Impact</a>
+                    </li>
+                    <li><a href="#faq">FAQs</a></li>
+                  </ul>
+                </div>
+                <div class="footer__list">
+                  <ul>
+                    <li>Resources</li>
+                    <li><a href="#">Ad Impact Studies</a></li>
+                    <li><a href="#">Viewer Surveys</a></li>
+                    <li><a href="#">Industry Reports</a></li>
+                    <li><a href="#">Best Practices</a></li>
+                    <li><a href="#">contact@laughter.zeeshanalis.org</a></li>
+                    <li><a href="#">developer@laughter.zeeshanalis.org</a></li>
+                  </ul>
+                </div>
+                <div class="download-buttons">
+                  <h5>Access the Web App</h5>
+                  <a href="main/index.html" class="web-app">
+                    <i class="fas fa-globe"></i>
+                    <div class="button-content">
+                      <h6>LAUNCH <span>Web App</span></h6>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="footer__copy">
+              <h6>&copy; zazeeshanalis.org</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--footer end-->
+    <div id="toastContainer" class="fixed bottom-4 right-4 z-50 flex flex-col gap-2"></div>
+<div id="popupOverlay" class="popup-overlay">
+  <div class="bg-white rounded-lg shadow-lg max-w-[50rem] h-50  w-full md:flex">
+      <!-- Left Side Section (Blue Box) - Hidden on Mobile -->
+      <div class="hidden md:flex w-1/4 bg-[#CE82F5] rounded-l-lg flex-col justify-between items-center text-white p-4">
+          <div class="font-bold text-lg text-center">
+              From<br>ZeeshanAli.org
+          </div>
+          <div class="">
+            <p class="mb-4 text-center text-sm text-white font-bold mt-4">
+                Sharing Is Your Responsibility
+            </p>
+              <!-- Share Button for Desktop -->
+              <button onclick="showSharePopup()" class="bg-white text-gray-700 px-4 py-2 rounded-md font-medium hover:bg-gray-200">
+                Kindly Share
+            </button>
+          </div>
+         
+      </div>
+      <!-- Right Side Section (Main Content) -->
+      <div class="w-full md:w-3/4 p-8 relative">
+          <!-- Close Button -->
+          <button id="closePopup" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold">
+              &times;
+          </button>
+          <!-- Heading -->
+          <h1 class="text-5xl md:text-6xl text-center font-bold text-gray-900"><span class="text-[#CE82F5]">Free</span> Forever</h1>
+     
+          <!-- Paragraph -->
+          <p class="text-center text-gray-600 font-bold mt-4">
+            This Is a Gift For You
+        </p>
+          <p class="text-gray-600 mt-4">
+              This is a demo of our soon-to-release invention. Explore our work and, if you like what you see, kindly consider donating. <span class="italic"> "I do not have enough money to set up and expand all my different initiatives for you. all of which will be free forever."</span>If no donations or shares are received this specific project will be shut down. 
+          </p>
+          <p class="text-gray-600 font-bold">
+                Help Us Help You!
+        </p>
+          <!-- Buttons - Revised for Mobile -->
+          <div class="mt-6 flex flex-col md:flex-row w-full gap-4 md:gap-4">
+              <a href="#" class="w-full md:w-auto bg-[#CE82F5] text-white py-3 px-6 md:px-8 rounded-md font-bold hover:bg-[#CE82F5] text-center">Donate</a>
+              <a href="#" class="w-full md:w-auto text-gray-900 font-semibold hover:underline text-center py-3 px-6 border border-gray-300 rounded-md hover:bg-gray-50" id="understandButton">I Understand</a>
+          </div>
+               <!-- Share Button for Mobile -->
+          <div class="md:hidden mt-4 text-center">
+            <button onclick="showSharePopup()" class="bg-white text-gray-700 px-4 py-2 rounded-md font-medium hover:bg-gray-200">
+                Kindly Share
+            </button>
+          </div>
+          <!-- Terms and Conditions -->
+          <p class="text-sm text-gray-500 mt-4">
+              By understanding, you are agreeing to our <a href="https://zeeshanali.org/terms-condition.html" target="_blank" class="text-orange-600 underline">Terms and Conditions</a>
+          </p>
+          <!-- Social Icons -->
+          <div class="flex mt-6 space-x-4 text-gray-700">
+              <a href="https://www.instagram.com/zacharityfeedfoundation/" class="hover:text-gray-900" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.youtube.com/@Zazeeshanali" class="hover:text-gray-900" target="_blank"><i class="fab fa-youtube"></i></a>
+              <a href="https://www.linkedin.com/company/za-charity-feed-foundation" class="hover:text-gray-900" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="https://x.com/za_charity" class="hover:text-gray-900" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="https://discord.gg/MpykSVCFuv" class="hover:text-gray-900" target="_blank"><i class="fab fa-discord"></i></a>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Share Popup Overlay -->
+<!-- Share Popup Overlay -->
+<div id="youtubeSharePopup" class="fixed inset-0 bg-black/50 z-[1001] hidden items-center justify-center">
+    <div class="bg-white rounded-xl max-w-md w-full mx-4 relative">
+        <!-- Header -->
+        <div class="flex justify-between items-center p-4 border-b">
+            <h3 class="text-lg font-medium">Share</h3>
+            <button onclick="closeSharePopup()" class="text-gray-500 hover:text-gray-700">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Share Options -->
+        <div class="p-4">
+            <!-- Social Share Buttons -->
+            <div class="grid grid-cols-3 sm:grid-cols-6 gap-4 mb-6">
+                <!-- WhatsApp -->
+                <a href="#" onclick="shareToWhatsApp()" class="flex flex-col items-center gap-2">
+                    <div class="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center text-white hover:bg-green-600 transition-colors">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                    </div>
+                    <span class="text-xs">WhatsApp</span>
+                </a>
+                
+                <!-- Facebook -->
+                <a href="#" onclick="shareToFacebook()" class="flex flex-col items-center gap-2">
+                    <div class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white hover:bg-blue-700 transition-colors">
+                        <i class="fab fa-facebook-f text-2xl"></i>
+                    </div>
+                    <span class="text-xs">Facebook</span>
+                </a>
+                
+                <!-- Instagram -->
+                <a href="#" onclick="shareToInstagram()" class="flex flex-col items-center gap-2">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 flex items-center justify-center text-white hover:opacity-90 transition-opacity">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </div>
+                    <span class="text-xs">Instagram</span>
+                </a>
+        
+                <!-- LinkedIn -->
+                <a href="#" onclick="shareToLinkedIn()" class="flex flex-col items-center gap-2">
+                    <div class="w-12 h-12 rounded-full bg-blue-700 flex items-center justify-center text-white hover:bg-blue-800 transition-colors">
+                        <i class="fab fa-linkedin-in text-2xl"></i>
+                    </div>
+                    <span class="text-xs">LinkedIn</span>
+                </a>
+                
+                <!-- X (Twitter) -->
+                <a href="#" onclick="shareToX()" class="flex flex-col items-center gap-2">
+                    <div class="w-12 h-12 rounded-full bg-black flex items-center justify-center text-white hover:bg-gray-800 transition-colors">
+                        <i class="fa-brands fa-x-twitter text-xl"></i>
+                    </div>
+                    <span class="text-xs">X</span>
+                </a>
+                
+                <!-- Email -->
+                <a href="#" onclick="shareToEmail()" class="flex flex-col items-center gap-2">
+                    <div class="w-12 h-12 rounded-full bg-gray-600 flex items-center justify-center text-white hover:bg-gray-700 transition-colors">
+                        <i class="far fa-envelope text-xl"></i>
+                    </div>
+                    <span class="text-xs">Email</span>
+                </a>
+            </div>
+            
+            <!-- URL Copy Section -->
+            <div class="flex items-center gap-2 p-3 bg-gray-100 rounded-lg">
+                <input type="text" value="https://laughter.zeeshanalis.org" class="flex-1 bg-transparent outline-none text-sm" readonly>
+                <button onclick="copyLink()" class="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm font-medium transition-colors">
+                    <i class="far fa-copy"></i>
+                    Copy
+                </button>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/popper-1.16.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script>
+      $(window).on("load", function () {
+        $("body").addClass("loaded");
+      });
+    </script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/ytdefer.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const svg = document.getElementById("adImpactSvg");
+        const tv = document.getElementById("tv");
+        const xMark = document.getElementById("xMark");
+
+        svg.addEventListener("mouseover", () => {
+          tv.style.transform = "rotateY(15deg) rotateX(5deg) scale(1.05)";
+          xMark.style.opacity = "1";
+        });
+
+        svg.addEventListener("mouseout", () => {
+          tv.style.transform = "rotateY(0) rotateX(0) scale(1)";
+          xMark.style.opacity = "0";
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const svg = document.getElementById("psychologicalImpactSvg");
+        const brain = document.getElementById("brain");
+        const emotions = document.getElementById("emotions");
+
+        svg.addEventListener("mouseover", () => {
+          brain.style.filter = "url(#brainBlur)";
+          emotions.style.opacity = "1";
+        });
+
+        svg.addEventListener("mouseout", () => {
+          brain.style.filter = "none";
+          emotions.style.opacity = "0";
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const balanceScale = document.getElementById("balanceScale");
+        const leftScale = document.getElementById("leftScale");
+        const rightScale = document.getElementById("rightScale");
+
+        function updateBalance() {
+          const angle = (Math.random() - 0.5) * 10; // Random angle between -5 and 5 degrees
+          balanceScale.style.transform = `rotate(${angle}deg)`;
+          leftScale.style.transform = `rotate(${-angle}deg)`;
+          rightScale.style.transform = `rotate(${-angle}deg)`;
+        }
+
+        // Initial balance
+        updateBalance();
+
+        // Update balance every 3 seconds
+        setInterval(updateBalance, 3000);
+
+        // Add hover effect to FAQ symbols
+        const faqSymbols = document.querySelectorAll("#faqSymbols circle");
+        faqSymbols.forEach((symbol) => {
+          symbol.addEventListener("mouseover", () => {
+            symbol.style.transform = "scale(1.1)";
+          });
+          symbol.addEventListener("mouseout", () => {
+            symbol.style.transform = "scale(1)";
+          });
+        });
+      });
+    </script>
+ <script>
+   window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('popupOverlay').classList.add('active');
+            }, 1000); // Show popup after 2 seconds
+        });
+
+        // Close popup when clicking the close button
+        document.getElementById('closePopup').addEventListener('click', () => {
+            document.getElementById('popupOverlay').classList.remove('active');
+        });
+
+        // Close popup when clicking "I Understand"
+        document.getElementById('understandButton').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('popupOverlay').classList.remove('active');
+        });
+
+        // Close popup when clicking outside
+        document.getElementById('popupOverlay').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('popupOverlay')) {
+                document.getElementById('popupOverlay').classList.remove('active');
+            }
+        });
+        function copyToClipboard() {
+            navigator.clipboard.writeText('https://laughter.zeeshanalis.org').then(() => {
+                showToast('Link copied to clipboard!');
+            }).catch(err => {
+                showToast('Failed to copy link', 'error');
+            });
+        }// Show/Hide Share Popup Functions
+function showSharePopup() {
+    document.getElementById('youtubeSharePopup').classList.remove('hidden');
+    document.getElementById('youtubeSharePopup').classList.add('flex');
+}
+
+function closeSharePopup() {
+    document.getElementById('youtubeSharePopup').classList.add('hidden');
+    document.getElementById('youtubeSharePopup').classList.remove('flex');
+}
+    
+    // Share Functions
+    function copyToClipboard() {
+    // Close the initial popup
+    document.getElementById('popupOverlay').classList.remove('active');
+    // Show the share popup
+    showSharePopup();
+}
+// Share Functions
+function copyLink() {
+    navigator.clipboard.writeText('https://laughter.zeeshanalis.org').then(() => {
+        showToast('Link copied to clipboard!');
+    });
+}
+
+function shareToWhatsApp() {
+    window.open(`https://wa.me/?text=${encodeURIComponent('https://laughter.zeeshanalis.org')}`, '_blank');
+    closeSharePopup();
+}
+
+function shareToFacebook() {
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://laughter.zeeshanalis.org')}`, '_blank');
+    closeSharePopup();
+}
+function shareToInstagram() {
+    // Instagram doesn't support direct sharing via URL,
+    // so we'll copy the link and show a message
+    navigator.clipboard.writeText('https://laughter.zeeshanalis.org').then(() => {
+        showToast('Link copied! Open Instagram to share');
+    });
+    closeSharePopup();
+}
+
+function shareToLinkedIn() {
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent('https://laughter.zeeshanalis.org')}`, '_blank');
+    closeSharePopup();
+}
+
+function shareToX() {
+    window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent('https://laughter.zeeshanalis.org')}`, '_blank');
+    closeSharePopup();
+}
+
+function shareToEmail() {
+    window.location.href = `mailto:?body=${encodeURIComponent('https://laughter.zeeshanalis.org')}`;
+    closeSharePopup();
+}
+
+// Toast notification function
+function showToast(message) {
+    const toast = document.createElement('div');
+    toast.className = 'fixed bottom-4 right-4 bg-gray-800 text-white px-6 py-3 rounded-lg shadow-lg transition-opacity duration-300 z-[1002]';
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    
+    setTimeout(() => {
+        toast.style.opacity = '0';
+        setTimeout(() => {
+            document.body.removeChild(toast);
+        }, 300);
+    }, 2000);
+}
+
+// Close popup when clicking outside
+document.getElementById('youtubeSharePopup').addEventListener('click', (e) => {
+    if (e.target === document.getElementById('youtubeSharePopup')) {
+        closeSharePopup();
+    }
+});
+
+// Prevent closing when clicking inside the popup content
+document.querySelector('#youtubeSharePopup > div').addEventListener('click', (e) => {
+    e.stopPropagation();
+});
+ </script>
+
+    <script>
+      // Run the setup when the DOM is fully loaded
+      document.addEventListener("DOMContentLoaded", () => {
+        setupCarousels();
+      });
+      window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('popupOverlay').classList.add('active');
+            }, 1000); // Show popup after 2 seconds
+        });
+
+        // Close popup when clicking the close button
+        document.getElementById('closePopup').addEventListener('click', () => {
+            document.getElementById('popupOverlay').classList.remove('active');
+        });
+
+        // Close popup when clicking "I Understand"
+        document.getElementById('understandButton').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('popupOverlay').classList.remove('active');
+        });
+
+        // Close popup when clicking outside
+        document.getElementById('popupOverlay').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('popupOverlay')) {
+                document.getElementById('popupOverlay').classList.remove('active');
+            }
+        });
+        function copyToClipboard() {
+            navigator.clipboard.writeText('https://laughter.zeeshanalis.org').then(() => {
+                showToast('Link copied to clipboard!');
+            }).catch(err => {
+                showToast('Failed to copy link', 'error');
+            });
+        }
+    </script>
+
+<script type="text/javascript">
+  /** This section is only needed once per page if manually copying **/
+  if (typeof MauticSDKLoaded == 'undefined') {
+    var MauticSDKLoaded = true;
+    var head            = document.getElementsByTagName('head')[0];
+    var script          = document.createElement('script');
+    script.type         = 'text/javascript';
+    script.src          = 'https://subscribe.zeeshanali.org/media/js/mautic-form.js?v2fc87979';
+    script.onload       = function() {
+      MauticSDK.onLoad();
+    };
+    head.appendChild(script);
+    var MauticDomain = 'https://subscribe.zeeshanali.org';
+    var MauticLang   = {
+      'submittingMessage': "Please wait..."
+    }
+  } else if (typeof MauticSDK != 'undefined') {
+    MauticSDK.onLoad();
+  }
+</script>
+  </body>
 </html>
