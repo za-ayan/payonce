@@ -7,8 +7,18 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="shortcut icon" href="/Black_Circle_Icon_Business_Logo.webp" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="shortcut icon"
+      href="/Black_Circle_Icon_Business_Logo.webp"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
@@ -221,49 +231,123 @@
       transform: scale(1.1);
     }
     .popup-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            padding: 1rem;
-        }
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
 
-
-        .popup-overlay.active {
-            display: flex;
-        }
+    .popup-overlay.active {
+      display: flex;
+    }
   </style>
   <style type="text/css">
-    .mauticform_wrapper { max-width: 600px; margin: 10px auto; }
-    .mauticform-innerform {}
-    .mauticform-post-success {}
-    .mauticform-name { font-weight: bold; font-size: 1.5em; margin-bottom: 3px; }
-    .mauticform-description { margin-top: 2px; margin-bottom: 10px; }
-    .mauticform-error { margin-bottom: 10px; color: red; }
-    .mauticform-message { margin-bottom: 10px;color: green; }
-    .mauticform-row { display: block; margin-bottom: 20px; }
-    .mauticform-label { font-size: 1.1em; display: block; font-weight: bold; margin-bottom: 5px; }
-    .mauticform-row.mauticform-required .mauticform-label:after { color: #e32; content: " *"; display: inline; }
-    .mauticform-helpmessage { display: block; font-size: 0.9em; margin-bottom: 3px; }
-    .mauticform-errormsg { display: block; color: red; margin-top: 2px; }
-    .mauticform-selectbox, .mauticform-input, .mauticform-textarea { width: 100%; padding: 0.5em 0.5em; border: 1px solid #CCC; background: #fff; box-shadow: 0px 0px 0px #fff inset; border-radius: 4px; box-sizing: border-box; }
-    .mauticform-checkboxgrp-row {}
-    .mauticform-checkboxgrp-label { font-weight: normal; }
-    .mauticform-checkboxgrp-checkbox {}
-    .mauticform-radiogrp-row {}
-    .mauticform-radiogrp-label { font-weight: normal; }
-    .mauticform-radiogrp-radio {}
-    .mauticform-button-wrapper .mauticform-button.btn-default, .mauticform-pagebreak-wrapper .mauticform-pagebreak.btn-default { color: #5d6c7c;background-color: #ffffff;border-color: #dddddd;}
-    .mauticform-button-wrapper .mauticform-button, .mauticform-pagebreak-wrapper .mauticform-pagebreak { display: inline-block;margin-bottom: 0;font-weight: 600;text-align: center;vertical-align: middle;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;padding: 6px 12px;font-size: 13px;line-height: 1.3856;border-radius: 3px;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
-    .mauticform-button-wrapper .mauticform-button.btn-default[disabled], .mauticform-pagebreak-wrapper .mauticform-pagebreak.btn-default[disabled] { background-color: #ffffff; border-color: #dddddd; opacity: 0.75; cursor: not-allowed; }
-    .mauticform-pagebreak-wrapper .mauticform-button-wrapper {  display: inline; }
-    .mauticform-field-hidden { display:none }
+    .mauticform_wrapper {
+      max-width: 600px;
+      margin: 10px auto;
+    }
+    .mauticform-innerform {
+    }
+    .mauticform-post-success {
+    }
+    .mauticform-name {
+      font-weight: bold;
+      font-size: 1.5em;
+      margin-bottom: 3px;
+    }
+    .mauticform-description {
+      margin-top: 2px;
+      margin-bottom: 10px;
+    }
+    .mauticform-error {
+      margin-bottom: 10px;
+      color: red;
+    }
+    .mauticform-message {
+      margin-bottom: 10px;
+      color: green;
+    }
+    .mauticform-row {
+      display: block;
+      margin-bottom: 20px;
+    }
+    .mauticform-label {
+      font-size: 1.1em;
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .mauticform-row.mauticform-required .mauticform-label:after {
+      color: #e32;
+      content: " *";
+      display: inline;
+    }
+    .mauticform-helpmessage {
+      display: block;
+      font-size: 0.9em;
+      margin-bottom: 3px;
+    }
+    .mauticform-errormsg {
+      display: block;
+      color: red;
+      margin-top: 2px;
+    }
+    .mauticform-selectbox,
+    .mauticform-input,
+    .mauticform-textarea {
+      width: 100%;
+      padding: 0.5em 0.5em;
+      border: 1px solid #ccc;
+      background: #fff;
+      box-shadow: 0px 0px 0px #fff inset;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .mauticform-button-wrapper .mauticform-button.btn-default {
+      color: #fff;
+      background-color: #007bff;
+      border-color: #007bff;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .mauticform-button-wrapper .mauticform-button.btn-default:hover {
+      background-color: #0056b3;
+    }
+    .newsletter-section {
+      background-color: #f8f9fa;
+      padding: 60px 0;
+      margin: 20px 0;
+    }
+    .newsletter-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .newsletter-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .newsletter-title {
+      font-size: 2.5em;
+      color: #333;
+      margin-bottom: 15px;
+    }
+    .newsletter-description {
+      font-size: 1.1em;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto;
+    }
   </style>
 
   <body>
@@ -1144,51 +1228,128 @@
     <!--faq section end-->
 
     <!-- Newsletter start here -->
-    <section class="newsletter">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <h2 class="section-heading color-black">Subscribe to Our Newsletter</h2>
-            <p class="paragraph dark">
-              Stay updated with the latest insights on ad impact and viewing experience. Join our newsletter for exclusive content and tips.
-            </p>
-          </div>
-          <div class="col-lg-6">
-            <!-- Replace the existing form with Mautic form -->
-            <div id="mauticform_wrapper_payoncenewsletter" class="mauticform_wrapper">
-              <form autocomplete="false" role="form" method="post" action="https://subscribe.zeeshanali.org/form/submit?formId=11" id="mauticform_payoncenewsletter" data-mautic-form="payoncenewsletter" enctype="multipart/form-data" payonce>
-                <div class="mauticform-error" id="mauticform_payoncenewsletter_error"></div>
-                <div class="mauticform-message" id="mauticform_payoncenewsletter_message"></div>
-                <div class="mauticform-innerform">
-                  <div class="mauticform-page-wrapper mauticform-page-1" data-mautic-form-page="1">
-                    <div id="mauticform_payoncenewsletter_f_name" class="mauticform-row mauticform-text mauticform-field-1">
-                      <label id="mauticform_label_payoncenewsletter_f_name" for="mauticform_input_payoncenewsletter_f_name" class="mauticform-label">Name</label>
-                      <input id="mauticform_input_payoncenewsletter_f_name" name="mauticform[f_name]" value="" placeholder="Enter your name" class="mauticform-input" type="text">
-                      <span class="mauticform-errormsg" style="display: none;"></span>
-                    </div>
-    
-                    <div id="mauticform_payoncenewsletter_email" class="mauticform-row mauticform-email mauticform-field-2">
-                      <label id="mauticform_label_payoncenewsletter_email" for="mauticform_input_payoncenewsletter_email" class="mauticform-label">Email</label>
-                      <input id="mauticform_input_payoncenewsletter_email" name="mauticform[email]" value="" placeholder="Enter your email" class="mauticform-input" type="email">
-                      <span class="mauticform-errormsg" style="display: none;"></span>
-                    </div>
-    
-                    <div id="mauticform_payoncenewsletter_submit" class="mauticform-row mauticform-button-wrapper mauticform-field-3">
-                      <button type="submit" name="mauticform[submit]" id="mauticform_input_payoncenewsletter_submit" value="" class="mauticform-button btn btn-default">Subscribe</button>
-                    </div>
-                  </div>
+    <section class="newsletter-section">
+      <div class="newsletter-container">
+        <div class="newsletter-header">
+          <h2 class="newsletter-title">Subscribe to Our Newsletter</h2>
+          <p class="newsletter-description">
+            Stay updated with our latest news and updates delivered directly to
+            your inbox.
+          </p>
+        </div>
+
+        <div
+          id="mauticform_wrapper_payoncenewletter"
+          class="mauticform_wrapper"
+        >
+          <form
+            autocomplete="false"
+            role="form"
+            method="post"
+            action="https://subscribe.zeeshanali.org/form/submit?formId=10"
+            id="mauticform_payoncenewletter"
+            data-mautic-form="payoncenewletter"
+            enctype="multipart/form-data"
+          >
+            <div
+              class="mauticform-error"
+              id="mauticform_payoncenewletter_error"
+            ></div>
+            <div
+              class="mauticform-message"
+              id="mauticform_payoncenewletter_message"
+            ></div>
+            <div class="mauticform-innerform">
+              <div
+                class="mauticform-page-wrapper mauticform-page-1"
+                data-mautic-form-page="1"
+              >
+                <div
+                  id="mauticform_payoncenewletter_f_name"
+                  class="mauticform-row mauticform-text mauticform-field-1"
+                >
+                  <label
+                    id="mauticform_label_payoncenewletter_f_name"
+                    for="mauticform_input_payoncenewletter_f_name"
+                    class="mauticform-label"
+                    >Name</label
+                  >
+                  <input
+                    required
+                    id="mauticform_input_payoncenewletter_f_name"
+                    name="mauticform[f_name]"
+                    value=""
+                    placeholder="Enter your name"
+                    class="mauticform-input"
+                    type="text"
+                  />
+                  <span
+                    class="mauticform-errormsg"
+                    style="display: none"
+                  ></span>
                 </div>
-    
-                <input type="hidden" name="mauticform[formId]" id="mauticform_payoncenewsletter_id" value="11">
-                <input type="hidden" name="mauticform[return]" id="mauticform_payoncenewsletter_return" value="">
-                <input type="hidden" name="mauticform[formName]" id="mauticform_payoncenewsletter_name" value="payoncenewsletter">
-              </form>
+
+                <div
+                  id="mauticform_payoncenewletter_email"
+                  class="mauticform-row mauticform-email mauticform-field-2"
+                >
+                  <label
+                    id="mauticform_label_payoncenewletter_email"
+                    for="mauticform_input_payoncenewletter_email"
+                    class="mauticform-label"
+                    >Email</label
+                  >
+                  <input
+                    required
+                    id="mauticform_input_payoncenewletter_email"
+                    name="mauticform[email]"
+                    value=""
+                    placeholder="Enter your email"
+                    class="mauticform-input"
+                    type="email"
+                  />
+                  <span
+                    class="mauticform-errormsg"
+                    style="display: none"
+                  ></span>
+                </div>
+
+                <div
+                  id="mauticform_payoncenewletter_submit"
+                  class="mauticform-row mauticform-button-wrapper mauticform-field-3"
+                >
+                  <button
+                    type="submit"
+                    name="mauticform[submit]"
+                    id="mauticform_input_payoncenewletter_submit"
+                    value=""
+                    class="mauticform-button btn btn-default"
+                  >
+                    Subscribe Now
+                  </button>
+                </div>
+              </div>
             </div>
-            <p class="form-text text-muted mt-2">
-              By subscribing, you agree to our <a href="#" class="text-primary">Privacy Policy</a> and
-              <a href="#" class="text-primary">Terms of Service</a>.
-            </p>
-          </div>
+
+            <input
+              type="hidden"
+              name="mauticform[formId]"
+              id="mauticform_payoncenewletter_id"
+              value="10"
+            />
+            <input
+              type="hidden"
+              name="mauticform[return]"
+              id="mauticform_payoncenewletter_return"
+              value=""
+            />
+            <input
+              type="hidden"
+              name="mauticform[formName]"
+              id="mauticform_payoncenewletter_name"
+              value="payoncenewletter"
+            />
+          </form>
         </div>
       </div>
     </section>
@@ -1216,16 +1377,26 @@
                   <div class="social">
                     <ul>
                       <li class="facebook">
-                        <a href="https://www.instagram.com/zacharityfeedfoundation/"><i class="fab fa-instagram"></i></a>
+                        <a
+                          href="https://www.instagram.com/zacharityfeedfoundation/"
+                          ><i class="fab fa-instagram"></i
+                        ></a>
                       </li>
                       <li class="twitter">
-                        <a href="https://x.com/za_charity"><i class="fab fa-twitter"></i></a>
+                        <a href="https://x.com/za_charity"
+                          ><i class="fab fa-twitter"></i
+                        ></a>
                       </li>
                       <li class="linkedin">
-                        <a href="https://www.linkedin.com/company/za-charity-feed-foundation"><i class="fab fa-linkedin-in"></i></a>
+                        <a
+                          href="https://www.linkedin.com/company/za-charity-feed-foundation"
+                          ><i class="fab fa-linkedin-in"></i
+                        ></a>
                       </li>
                       <li class="youtube">
-                        <a href="https://www.youtube.com/@Zazeeshanali"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.youtube.com/@Zazeeshanali"
+                          ><i class="fab fa-youtube"></i
+                        ></a>
                       </li>
                     </ul>
                   </div>
@@ -1278,149 +1449,269 @@
       </div>
     </footer>
     <!--footer end-->
-    <div id="toastContainer" class="fixed bottom-4 right-4 z-50 flex flex-col gap-2"></div>
-<div id="popupOverlay" class="popup-overlay">
-  <div class="bg-white rounded-lg shadow-lg max-w-[50rem] h-50  w-full md:flex">
-      <!-- Left Side Section (Blue Box) - Hidden on Mobile -->
-      <div class="hidden md:flex w-1/4 bg-[#CE82F5] rounded-l-lg flex-col justify-between items-center text-white p-4">
+    <div
+      id="toastContainer"
+      class="fixed bottom-4 right-4 z-50 flex flex-col gap-2"
+    ></div>
+    <div id="popupOverlay" class="popup-overlay">
+      <div
+        class="bg-white rounded-lg shadow-lg max-w-[50rem] h-50 w-full md:flex"
+      >
+        <!-- Left Side Section (Blue Box) - Hidden on Mobile -->
+        <div
+          class="hidden md:flex w-1/4 bg-[#CE82F5] rounded-l-lg flex-col justify-between items-center text-white p-4"
+        >
           <div class="font-bold text-lg text-center">
-              From<br>ZeeshanAli.org
+            From<br />ZeeshanAli.org
           </div>
           <div class="">
             <p class="mb-4 text-center text-sm text-white font-bold mt-4">
-                Sharing Is Your Responsibility
+              Sharing Is Your Responsibility
             </p>
-              <!-- Share Button for Desktop -->
-              <button onclick="showSharePopup()" class="bg-white text-gray-700 px-4 py-2 rounded-md font-medium hover:bg-gray-200">
-                Kindly Share
+            <!-- Share Button for Desktop -->
+            <button
+              onclick="showSharePopup()"
+              class="bg-white text-gray-700 px-4 py-2 rounded-md font-medium hover:bg-gray-200"
+            >
+              Kindly Share
             </button>
           </div>
-         
-      </div>
-      <!-- Right Side Section (Main Content) -->
-      <div class="w-full md:w-3/4 p-8 relative">
+        </div>
+        <!-- Right Side Section (Main Content) -->
+        <div class="w-full md:w-3/4 p-8 relative">
           <!-- Close Button -->
-          <button id="closePopup" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold">
-              &times;
+          <button
+            id="closePopup"
+            class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold"
+          >
+            &times;
           </button>
           <!-- Heading -->
-          <h1 class="text-5xl md:text-6xl text-center font-bold text-gray-900"><span class="text-[#CE82F5]">Free</span> Forever</h1>
-     
+          <h1 class="text-5xl md:text-6xl text-center font-bold text-gray-900">
+            <span class="text-[#CE82F5]">Free</span> Forever
+          </h1>
+
           <!-- Paragraph -->
           <p class="text-center text-gray-600 font-bold mt-4">
             This Is a Gift For You
-        </p>
-          <p class="text-gray-600 mt-4">
-              This is a demo of our soon-to-release invention. Explore our work and, if you like what you see, kindly consider donating. <span class="italic"> "I do not have enough money to set up and expand all my different initiatives for you. all of which will be free forever."</span>If no donations or shares are received this specific project will be shut down. 
           </p>
-          <p class="text-gray-600 font-bold">
-                Help Us Help You!
-        </p>
+          <p class="text-gray-600 mt-4">
+            This is a demo of our soon-to-release invention. Explore our work
+            and, if you like what you see, kindly consider donating.
+            <span class="italic">
+              "I do not have enough money to set up and expand all my different
+              initiatives for you. all of which will be free forever."</span
+            >If no donations or shares are received this specific project will
+            be shut down.
+          </p>
+          <p class="text-gray-600 font-bold">Help Us Help You!</p>
           <!-- Buttons - Revised for Mobile -->
           <div class="mt-6 flex flex-col md:flex-row w-full gap-4 md:gap-4">
-              <a href="#" class="w-full md:w-auto bg-[#CE82F5] text-white py-3 px-6 md:px-8 rounded-md font-bold hover:bg-[#CE82F5] text-center">Donate</a>
-              <a href="#" class="w-full md:w-auto text-gray-900 font-semibold hover:underline text-center py-3 px-6 border border-gray-300 rounded-md hover:bg-gray-50" id="understandButton">I Understand</a>
+            <a
+              href="#"
+              class="w-full md:w-auto bg-[#CE82F5] text-white py-3 px-6 md:px-8 rounded-md font-bold hover:bg-[#CE82F5] text-center"
+              >Donate</a
+            >
+            <a
+              href="#"
+              class="w-full md:w-auto text-gray-900 font-semibold hover:underline text-center py-3 px-6 border border-gray-300 rounded-md hover:bg-gray-50"
+              id="understandButton"
+              >I Understand</a
+            >
           </div>
-               <!-- Share Button for Mobile -->
+          <!-- Share Button for Mobile -->
           <div class="md:hidden mt-4 text-center">
-            <button onclick="showSharePopup()" class="bg-white text-gray-700 px-4 py-2 rounded-md font-medium hover:bg-gray-200">
-                Kindly Share
+            <button
+              onclick="showSharePopup()"
+              class="bg-white text-gray-700 px-4 py-2 rounded-md font-medium hover:bg-gray-200"
+            >
+              Kindly Share
             </button>
           </div>
           <!-- Terms and Conditions -->
           <p class="text-sm text-gray-500 mt-4">
-              By understanding, you are agreeing to our <a href="https://zeeshanali.org/terms-condition.html" target="_blank" class="text-orange-600 underline">Terms and Conditions</a>
+            By understanding, you are agreeing to our
+            <a
+              href="https://zeeshanali.org/terms-condition.html"
+              target="_blank"
+              class="text-orange-600 underline"
+              >Terms and Conditions</a
+            >
           </p>
           <!-- Social Icons -->
           <div class="flex mt-6 space-x-4 text-gray-700">
-              <a href="https://www.instagram.com/zacharityfeedfoundation/" class="hover:text-gray-900" target="_blank"><i class="fab fa-instagram"></i></a>
-              <a href="https://www.youtube.com/@Zazeeshanali" class="hover:text-gray-900" target="_blank"><i class="fab fa-youtube"></i></a>
-              <a href="https://www.linkedin.com/company/za-charity-feed-foundation" class="hover:text-gray-900" target="_blank"><i class="fab fa-linkedin"></i></a>
-              <a href="https://x.com/za_charity" class="hover:text-gray-900" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-              <a href="https://discord.gg/MpykSVCFuv" class="hover:text-gray-900" target="_blank"><i class="fab fa-discord"></i></a>
+            <a
+              href="https://www.instagram.com/zacharityfeedfoundation/"
+              class="hover:text-gray-900"
+              target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/@Zazeeshanali"
+              class="hover:text-gray-900"
+              target="_blank"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/company/za-charity-feed-foundation"
+              class="hover:text-gray-900"
+              target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              href="https://x.com/za_charity"
+              class="hover:text-gray-900"
+              target="_blank"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+            <a
+              href="https://discord.gg/MpykSVCFuv"
+              class="hover:text-gray-900"
+              target="_blank"
+              ><i class="fab fa-discord"></i
+            ></a>
           </div>
+        </div>
       </div>
-  </div>
-</div>
-<!-- Share Popup Overlay -->
-<!-- Share Popup Overlay -->
-<div id="youtubeSharePopup" class="fixed inset-0 bg-black/50 z-[1001] hidden items-center justify-center">
-    <div class="bg-white rounded-xl max-w-md w-full mx-4 relative">
+    </div>
+    <!-- Share Popup Overlay -->
+    <!-- Share Popup Overlay -->
+    <div
+      id="youtubeSharePopup"
+      class="fixed inset-0 bg-black/50 z-[1001] hidden items-center justify-center"
+    >
+      <div class="bg-white rounded-xl max-w-md w-full mx-4 relative">
         <!-- Header -->
         <div class="flex justify-between items-center p-4 border-b">
-            <h3 class="text-lg font-medium">Share</h3>
-            <button onclick="closeSharePopup()" class="text-gray-500 hover:text-gray-700">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
+          <h3 class="text-lg font-medium">Share</h3>
+          <button
+            onclick="closeSharePopup()"
+            class="text-gray-500 hover:text-gray-700"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
         </div>
-        
+
         <!-- Share Options -->
         <div class="p-4">
-            <!-- Social Share Buttons -->
-            <div class="grid grid-cols-3 sm:grid-cols-6 gap-4 mb-6">
-                <!-- WhatsApp -->
-                <a href="#" onclick="shareToWhatsApp()" class="flex flex-col items-center gap-2">
-                    <div class="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center text-white hover:bg-green-600 transition-colors">
-                        <i class="fab fa-whatsapp text-2xl"></i>
-                    </div>
-                    <span class="text-xs">WhatsApp</span>
-                </a>
-                
-                <!-- Facebook -->
-                <a href="#" onclick="shareToFacebook()" class="flex flex-col items-center gap-2">
-                    <div class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white hover:bg-blue-700 transition-colors">
-                        <i class="fab fa-facebook-f text-2xl"></i>
-                    </div>
-                    <span class="text-xs">Facebook</span>
-                </a>
-                
-                <!-- Instagram -->
-                <a href="#" onclick="shareToInstagram()" class="flex flex-col items-center gap-2">
-                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 flex items-center justify-center text-white hover:opacity-90 transition-opacity">
-                        <i class="fab fa-instagram text-2xl"></i>
-                    </div>
-                    <span class="text-xs">Instagram</span>
-                </a>
-        
-                <!-- LinkedIn -->
-                <a href="#" onclick="shareToLinkedIn()" class="flex flex-col items-center gap-2">
-                    <div class="w-12 h-12 rounded-full bg-blue-700 flex items-center justify-center text-white hover:bg-blue-800 transition-colors">
-                        <i class="fab fa-linkedin-in text-2xl"></i>
-                    </div>
-                    <span class="text-xs">LinkedIn</span>
-                </a>
-                
-                <!-- X (Twitter) -->
-                <a href="#" onclick="shareToX()" class="flex flex-col items-center gap-2">
-                    <div class="w-12 h-12 rounded-full bg-black flex items-center justify-center text-white hover:bg-gray-800 transition-colors">
-                        <i class="fa-brands fa-x-twitter text-xl"></i>
-                    </div>
-                    <span class="text-xs">X</span>
-                </a>
-                
-                <!-- Email -->
-                <a href="#" onclick="shareToEmail()" class="flex flex-col items-center gap-2">
-                    <div class="w-12 h-12 rounded-full bg-gray-600 flex items-center justify-center text-white hover:bg-gray-700 transition-colors">
-                        <i class="far fa-envelope text-xl"></i>
-                    </div>
-                    <span class="text-xs">Email</span>
-                </a>
-            </div>
-            
-            <!-- URL Copy Section -->
-            <div class="flex items-center gap-2 p-3 bg-gray-100 rounded-lg">
-                <input type="text" value="https://payonce.zeeshanalis.org" class="flex-1 bg-transparent outline-none text-sm" readonly>
-                <button onclick="copyLink()" class="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm font-medium transition-colors">
-                    <i class="far fa-copy"></i>
-                    Copy
-                </button>
-            </div>
+          <!-- Social Share Buttons -->
+          <div class="grid grid-cols-3 sm:grid-cols-6 gap-4 mb-6">
+            <!-- WhatsApp -->
+            <a
+              href="#"
+              onclick="shareToWhatsApp()"
+              class="flex flex-col items-center gap-2"
+            >
+              <div
+                class="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center text-white hover:bg-green-600 transition-colors"
+              >
+                <i class="fab fa-whatsapp text-2xl"></i>
+              </div>
+              <span class="text-xs">WhatsApp</span>
+            </a>
+
+            <!-- Facebook -->
+            <a
+              href="#"
+              onclick="shareToFacebook()"
+              class="flex flex-col items-center gap-2"
+            >
+              <div
+                class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white hover:bg-blue-700 transition-colors"
+              >
+                <i class="fab fa-facebook-f text-2xl"></i>
+              </div>
+              <span class="text-xs">Facebook</span>
+            </a>
+
+            <!-- Instagram -->
+            <a
+              href="#"
+              onclick="shareToInstagram()"
+              class="flex flex-col items-center gap-2"
+            >
+              <div
+                class="w-12 h-12 rounded-full bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 flex items-center justify-center text-white hover:opacity-90 transition-opacity"
+              >
+                <i class="fab fa-instagram text-2xl"></i>
+              </div>
+              <span class="text-xs">Instagram</span>
+            </a>
+
+            <!-- LinkedIn -->
+            <a
+              href="#"
+              onclick="shareToLinkedIn()"
+              class="flex flex-col items-center gap-2"
+            >
+              <div
+                class="w-12 h-12 rounded-full bg-blue-700 flex items-center justify-center text-white hover:bg-blue-800 transition-colors"
+              >
+                <i class="fab fa-linkedin-in text-2xl"></i>
+              </div>
+              <span class="text-xs">LinkedIn</span>
+            </a>
+
+            <!-- X (Twitter) -->
+            <a
+              href="#"
+              onclick="shareToX()"
+              class="flex flex-col items-center gap-2"
+            >
+              <div
+                class="w-12 h-12 rounded-full bg-black flex items-center justify-center text-white hover:bg-gray-800 transition-colors"
+              >
+                <i class="fa-brands fa-x-twitter text-xl"></i>
+              </div>
+              <span class="text-xs">X</span>
+            </a>
+
+            <!-- Email -->
+            <a
+              href="#"
+              onclick="shareToEmail()"
+              class="flex flex-col items-center gap-2"
+            >
+              <div
+                class="w-12 h-12 rounded-full bg-gray-600 flex items-center justify-center text-white hover:bg-gray-700 transition-colors"
+              >
+                <i class="far fa-envelope text-xl"></i>
+              </div>
+              <span class="text-xs">Email</span>
+            </a>
+          </div>
+
+          <!-- URL Copy Section -->
+          <div class="flex items-center gap-2 p-3 bg-gray-100 rounded-lg">
+            <input
+              type="text"
+              value="https://payonce.zeeshanalis.org"
+              class="flex-1 bg-transparent outline-none text-sm"
+              readonly
+            />
+            <button
+              onclick="copyLink()"
+              class="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm font-medium transition-colors"
+            >
+              <i class="far fa-copy"></i>
+              Copy
+            </button>
+          </div>
         </div>
-        
+      </div>
     </div>
-</div>
 
     <script src="assets/js/jquery-3.4.1.min.js"></script>
     <script src="assets/js/popper-1.16.0.min.js"></script>
@@ -1498,178 +1789,220 @@
         });
       });
     </script>
- <script>
-   window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.getElementById('popupOverlay').classList.add('active');
-            }, 1000); // Show popup after 2 seconds
-        });
-
-        // Close popup when clicking the close button
-        document.getElementById('closePopup').addEventListener('click', () => {
-            document.getElementById('popupOverlay').classList.remove('active');
-        });
-
-        // Close popup when clicking "I Understand"
-        document.getElementById('understandButton').addEventListener('click', (e) => {
-            e.preventDefault();
-            document.getElementById('popupOverlay').classList.remove('active');
-        });
-
-        // Close popup when clicking outside
-        document.getElementById('popupOverlay').addEventListener('click', (e) => {
-            if (e.target === document.getElementById('popupOverlay')) {
-                document.getElementById('popupOverlay').classList.remove('active');
-            }
-        });
-        function copyToClipboard() {
-            navigator.clipboard.writeText('https://payonce.zeeshanalis.org').then(() => {
-                showToast('Link copied to clipboard!');
-            }).catch(err => {
-                showToast('Failed to copy link', 'error');
-            });
-        }// Show/Hide Share Popup Functions
-function showSharePopup() {
-    document.getElementById('youtubeSharePopup').classList.remove('hidden');
-    document.getElementById('youtubeSharePopup').classList.add('flex');
-}
-
-function closeSharePopup() {
-    document.getElementById('youtubeSharePopup').classList.add('hidden');
-    document.getElementById('youtubeSharePopup').classList.remove('flex');
-}
-    
-    // Share Functions
-    function copyToClipboard() {
-    // Close the initial popup
-    document.getElementById('popupOverlay').classList.remove('active');
-    // Show the share popup
-    showSharePopup();
-}
-// Share Functions
-function copyLink() {
-    navigator.clipboard.writeText('https://payonce.zeeshanalis.org').then(() => {
-        showToast('Link copied to clipboard!');
-    });
-}
-
-function shareToWhatsApp() {
-    window.open(`https://wa.me/?text=${encodeURIComponent('https://payonce.zeeshanalis.org')}`, '_blank');
-    closeSharePopup();
-}
-
-function shareToFacebook() {
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://payonce.zeeshanalis.org')}`, '_blank');
-    closeSharePopup();
-}
-function shareToInstagram() {
-    // Instagram doesn't support direct sharing via URL,
-    // so we'll copy the link and show a message
-    navigator.clipboard.writeText('https://payonce.zeeshanalis.org').then(() => {
-        showToast('Link copied! Open Instagram to share');
-    });
-    closeSharePopup();
-}
-
-function shareToLinkedIn() {
-    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent('https://payonce.zeeshanalis.org')}`, '_blank');
-    closeSharePopup();
-}
-
-function shareToX() {
-    window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent('https://payonce.zeeshanalis.org')}`, '_blank');
-    closeSharePopup();
-}
-
-function shareToEmail() {
-    window.location.href = `mailto:?body=${encodeURIComponent('https://payonce.zeeshanalis.org')}`;
-    closeSharePopup();
-}
-
-// Toast notification function
-function showToast(message) {
-    const toast = document.createElement('div');
-    toast.className = 'fixed bottom-4 right-4 bg-gray-800 text-white px-6 py-3 rounded-lg shadow-lg transition-opacity duration-300 z-[1002]';
-    toast.textContent = message;
-    document.body.appendChild(toast);
-    
-    setTimeout(() => {
-        toast.style.opacity = '0';
+    <script>
+      window.addEventListener("load", () => {
         setTimeout(() => {
-            document.body.removeChild(toast);
-        }, 300);
-    }, 2000);
-}
+          document.getElementById("popupOverlay").classList.add("active");
+        }, 1000); // Show popup after 2 seconds
+      });
 
-// Close popup when clicking outside
-document.getElementById('youtubeSharePopup').addEventListener('click', (e) => {
-    if (e.target === document.getElementById('youtubeSharePopup')) {
+      // Close popup when clicking the close button
+      document.getElementById("closePopup").addEventListener("click", () => {
+        document.getElementById("popupOverlay").classList.remove("active");
+      });
+
+      // Close popup when clicking "I Understand"
+      document
+        .getElementById("understandButton")
+        .addEventListener("click", (e) => {
+          e.preventDefault();
+          document.getElementById("popupOverlay").classList.remove("active");
+        });
+
+      // Close popup when clicking outside
+      document.getElementById("popupOverlay").addEventListener("click", (e) => {
+        if (e.target === document.getElementById("popupOverlay")) {
+          document.getElementById("popupOverlay").classList.remove("active");
+        }
+      });
+      function copyToClipboard() {
+        navigator.clipboard
+          .writeText("https://payonce.zeeshanalis.org")
+          .then(() => {
+            showToast("Link copied to clipboard!");
+          })
+          .catch((err) => {
+            showToast("Failed to copy link", "error");
+          });
+      } // Show/Hide Share Popup Functions
+      function showSharePopup() {
+        document.getElementById("youtubeSharePopup").classList.remove("hidden");
+        document.getElementById("youtubeSharePopup").classList.add("flex");
+      }
+
+      function closeSharePopup() {
+        document.getElementById("youtubeSharePopup").classList.add("hidden");
+        document.getElementById("youtubeSharePopup").classList.remove("flex");
+      }
+
+      // Share Functions
+      function copyToClipboard() {
+        // Close the initial popup
+        document.getElementById("popupOverlay").classList.remove("active");
+        // Show the share popup
+        showSharePopup();
+      }
+      // Share Functions
+      function copyLink() {
+        navigator.clipboard
+          .writeText("https://payonce.zeeshanalis.org")
+          .then(() => {
+            showToast("Link copied to clipboard!");
+          });
+      }
+
+      function shareToWhatsApp() {
+        window.open(
+          `https://wa.me/?text=${encodeURIComponent(
+            "https://payonce.zeeshanalis.org"
+          )}`,
+          "_blank"
+        );
         closeSharePopup();
-    }
-});
+      }
 
-// Prevent closing when clicking inside the popup content
-document.querySelector('#youtubeSharePopup > div').addEventListener('click', (e) => {
-    e.stopPropagation();
-});
- </script>
+      function shareToFacebook() {
+        window.open(
+          `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+            "https://payonce.zeeshanalis.org"
+          )}`,
+          "_blank"
+        );
+        closeSharePopup();
+      }
+      function shareToInstagram() {
+        // Instagram doesn't support direct sharing via URL,
+        // so we'll copy the link and show a message
+        navigator.clipboard
+          .writeText("https://payonce.zeeshanalis.org")
+          .then(() => {
+            showToast("Link copied! Open Instagram to share");
+          });
+        closeSharePopup();
+      }
+
+      function shareToLinkedIn() {
+        window.open(
+          `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+            "https://payonce.zeeshanalis.org"
+          )}`,
+          "_blank"
+        );
+        closeSharePopup();
+      }
+
+      function shareToX() {
+        window.open(
+          `https://twitter.com/intent/tweet?url=${encodeURIComponent(
+            "https://payonce.zeeshanalis.org"
+          )}`,
+          "_blank"
+        );
+        closeSharePopup();
+      }
+
+      function shareToEmail() {
+        window.location.href = `mailto:?body=${encodeURIComponent(
+          "https://payonce.zeeshanalis.org"
+        )}`;
+        closeSharePopup();
+      }
+
+      // Toast notification function
+      function showToast(message) {
+        const toast = document.createElement("div");
+        toast.className =
+          "fixed bottom-4 right-4 bg-gray-800 text-white px-6 py-3 rounded-lg shadow-lg transition-opacity duration-300 z-[1002]";
+        toast.textContent = message;
+        document.body.appendChild(toast);
+
+        setTimeout(() => {
+          toast.style.opacity = "0";
+          setTimeout(() => {
+            document.body.removeChild(toast);
+          }, 300);
+        }, 2000);
+      }
+
+      // Close popup when clicking outside
+      document
+        .getElementById("youtubeSharePopup")
+        .addEventListener("click", (e) => {
+          if (e.target === document.getElementById("youtubeSharePopup")) {
+            closeSharePopup();
+          }
+        });
+
+      // Prevent closing when clicking inside the popup content
+      document
+        .querySelector("#youtubeSharePopup > div")
+        .addEventListener("click", (e) => {
+          e.stopPropagation();
+        });
+    </script>
 
     <script>
       // Run the setup when the DOM is fully loaded
       document.addEventListener("DOMContentLoaded", () => {
         setupCarousels();
       });
-      window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.getElementById('popupOverlay').classList.add('active');
-            }, 1000); // Show popup after 2 seconds
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          document.getElementById("popupOverlay").classList.add("active");
+        }, 1000); // Show popup after 2 seconds
+      });
+
+      // Close popup when clicking the close button
+      document.getElementById("closePopup").addEventListener("click", () => {
+        document.getElementById("popupOverlay").classList.remove("active");
+      });
+
+      // Close popup when clicking "I Understand"
+      document
+        .getElementById("understandButton")
+        .addEventListener("click", (e) => {
+          e.preventDefault();
+          document.getElementById("popupOverlay").classList.remove("active");
         });
 
-        // Close popup when clicking the close button
-        document.getElementById('closePopup').addEventListener('click', () => {
-            document.getElementById('popupOverlay').classList.remove('active');
-        });
-
-        // Close popup when clicking "I Understand"
-        document.getElementById('understandButton').addEventListener('click', (e) => {
-            e.preventDefault();
-            document.getElementById('popupOverlay').classList.remove('active');
-        });
-
-        // Close popup when clicking outside
-        document.getElementById('popupOverlay').addEventListener('click', (e) => {
-            if (e.target === document.getElementById('popupOverlay')) {
-                document.getElementById('popupOverlay').classList.remove('active');
-            }
-        });
-        function copyToClipboard() {
-            navigator.clipboard.writeText('https://payonce.zeeshanalis.org').then(() => {
-                showToast('Link copied to clipboard!');
-            }).catch(err => {
-                showToast('Failed to copy link', 'error');
-            });
+      // Close popup when clicking outside
+      document.getElementById("popupOverlay").addEventListener("click", (e) => {
+        if (e.target === document.getElementById("popupOverlay")) {
+          document.getElementById("popupOverlay").classList.remove("active");
         }
+      });
+      function copyToClipboard() {
+        navigator.clipboard
+          .writeText("https://payonce.zeeshanalis.org")
+          .then(() => {
+            showToast("Link copied to clipboard!");
+          })
+          .catch((err) => {
+            showToast("Failed to copy link", "error");
+          });
+      }
     </script>
 
-<script type="text/javascript">
-  /** This section is only needed once per page if manually copying **/
-  if (typeof MauticSDKLoaded == 'undefined') {
-    var MauticSDKLoaded = true;
-    var head            = document.getElementsByTagName('head')[0];
-    var script          = document.createElement('script');
-    script.type         = 'text/javascript';
-    script.src          = 'https://subscribe.zeeshanali.org/media/js/mautic-form.js?v2fc87979';
-    script.onload       = function() {
-      MauticSDK.onLoad();
-    };
-    head.appendChild(script);
-    var MauticDomain = 'https://subscribe.zeeshanali.org';
-    var MauticLang   = {
-      'submittingMessage': "Please wait..."
-    }
-  } else if (typeof MauticSDK != 'undefined') {
-    MauticSDK.onLoad();
-  }
-</script>
+    <script type="text/javascript">
+      /** This section is only needed once per page if manually copying **/
+      if (typeof MauticSDKLoaded == "undefined") {
+        var MauticSDKLoaded = true;
+        var head = document.getElementsByTagName("head")[0];
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src =
+          "https://subscribe.zeeshanali.org/media/js/mautic-form.js?v2fc87979";
+        script.onload = function () {
+          MauticSDK.onLoad();
+        };
+        head.appendChild(script);
+        var MauticDomain = "https://subscribe.zeeshanali.org";
+        var MauticLang = {
+          submittingMessage: "Please wait...",
+        };
+      } else if (typeof MauticSDK != "undefined") {
+        MauticSDK.onLoad();
+      }
+    </script>
   </body>
 </html>
